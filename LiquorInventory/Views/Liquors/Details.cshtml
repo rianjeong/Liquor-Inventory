@@ -1,0 +1,50 @@
+﻿@model LiquorInventory.Models.Liquor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Liquor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.liquorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.liquorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.liquorCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.liquorCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.liquorInventory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.liquorInventory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.liquorInventoryCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.liquorInventoryCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.liquorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

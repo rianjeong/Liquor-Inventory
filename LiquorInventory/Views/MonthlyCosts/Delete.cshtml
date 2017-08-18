@@ -1,0 +1,80 @@
+﻿@model LiquorInventory.Models.MonthlyCost
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MonthlyCost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentInventoryCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentInventoryCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousInventoryCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousInventoryCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlySales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlySales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Difference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Difference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PourCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PourCost)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

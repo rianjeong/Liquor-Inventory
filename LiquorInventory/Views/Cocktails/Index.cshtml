@@ -1,0 +1,41 @@
+﻿@model IEnumerable<LiquorInventory.Models.Cocktail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cocktailName)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.cocktailPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cocktailName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.cocktailPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cocktailId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cocktailId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cocktailId })
+        </td>
+    </tr>
+}
+
+</table>

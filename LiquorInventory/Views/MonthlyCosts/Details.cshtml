@@ -1,0 +1,74 @@
+﻿@model LiquorInventory.Models.MonthlyCost
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MonthlyCost</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Month)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Month)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentInventoryCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentInventoryCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousMonth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousMonth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PreviousInventoryCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreviousInventoryCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MonthlySales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MonthlySales)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Difference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Difference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PourCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PourCost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MonthlyCostId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
